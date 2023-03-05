@@ -53,7 +53,7 @@ let displayData = (searchText , limit) => {
             </figure>
             <div class="card-body">
                 <h2 class="card-title text-bold text-white">${phone_name}</h2>
-                <p>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p>This is a longer card with supporting text below as a natural lead-in to additional content.</p>
                 <div class="card-actions justify-center">
                 <label for="my-modal-3" class="btn bg-green-400 hover:bg-green-600 text-black" onclick = "loadDataDetail('${slug}')">Details</label>
                 </div>
@@ -88,10 +88,7 @@ let loadDataDetail = async(id)=>{
 
 
 let displayDataDetail = (details)=>{
-    // console.log(details)
     let {name, releaseDate, mainFeatures, others, sensors} = details;
-    // console.log(details)
-    // dateArr.push(releaseDate)
     let index = 1;
     let otherInfo = document.createElement('div')
     if(others){

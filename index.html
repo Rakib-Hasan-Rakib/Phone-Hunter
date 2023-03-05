@@ -18,8 +18,8 @@
   <body class="w-11/12 mx-auto">
     <header class="text-center">
       <h1 class="text-4xl">Welcome to Phone Hunter!!</h1>
-      <div class="form-control ml-52 mt-4">
-        <div class="input-group pl-40">
+      <div class="form-control mt-4">
+        <div class="input-group flex justify-center">
           <input
             id="search-value"
             type="text"
@@ -54,13 +54,13 @@
         <button id="loading-btn">Loading...</button>
       </section>
       <section id="no-phone" class="flex justify-center my-4 hidden">
-        <p class="text-red-700 text-2xl">
+        <p class="text-red-700 text-lg md:text-3xl">
           No Phone Found. Please try new search...
         </p>
       </section>
       <section id="sort-phones" class="hidden my-4 flex justify-center">
         <button id="sort-name" class="btn btn-outline btn-primary">Sort by Name</button>
-        <button id="sort-date" class="btn btn-outline btn-primary">Sort by Date</button>
+        <!-- <button id="sort-date" class="btn btn-outline btn-primary">Sort by Date</button> -->
         <!-- <select name="sort by" id="">
           <option value="default">default</option>
           <option id="sort" value="name">Name</option>
@@ -69,7 +69,7 @@
       </section>
       <section
         id="card-container"
-        class="grid grid-cols-3 gap-4 mt-7"
+        class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 mt-7"
       ></section>
 
       <section id="phone-detail">
