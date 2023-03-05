@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="w-11/12 mx-auto">
+    <header class="text-center">
+      <h1 class="text-4xl">Welcome to Phone Hunter!!</h1>
+      <div class="form-control ml-52 mt-4">
+        <div class="input-group pl-40">
+          <input
+            id="search-value"
+            type="text"
+            placeholder="Search…"
+            class="input input-bordered outline-none"
+          />
+          <button
+            id="search-btn"
+            class="btn btn-square bg-green-800 hover:bg-red-500"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="loading" class="hidden text-center my-5 text-amber-400">
+        <button id="loading-btn">Loading...</button>
+      </section>
+      <section id="no-phone" class="flex justify-center my-4 hidden">
+        <p class="text-red-700 text-2xl">
+          No Phone Found. Please try new search...
+        </p>
+      </section>
+      <section id="sort-phones" class="hidden my-4 flex justify-center">
+        <button id="sort-name" class="btn btn-outline btn-primary">Sort by Name</button>
+        <button id="sort-date" class="btn btn-outline btn-primary">Sort by Date</button>
+        <!-- <select name="sort by" id="">
+          <option value="default">default</option>
+          <option id="sort" value="name">Name</option>
+          <option value="date">Date</option>
+        </select> -->
+      </section>
+      <section
+        id="card-container"
+        class="grid grid-cols-3 gap-4 mt-7"
+      ></section>
+
+      <section id="phone-detail">
+          <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+          <div class="modal">
+            <div class="modal-box relative">
+              <label
+                for="my-modal-3"
+                class="btn btn-sm btn-circle absolute right-2 top-2"
+                >✕</label
+              >
+              <div id="modal-body"></div>
+            </div>
+          </div>
+      </section>
+      <section id="show-all" class="flex justify-center my-4">
+        <button id="show-all-btn" class="btn btn-outline btn-primary hidden">Show All</button>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
